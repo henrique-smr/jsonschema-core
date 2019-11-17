@@ -1,2 +1,2 @@
-from jsonschema.cli import main
+from jsonschema_core.cli import main
 main()

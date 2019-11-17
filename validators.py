@@ -10,14 +10,14 @@ import numbers
 
 from six import add_metaclass
 
-from jsonschema import (
+from jsonschema_core import (
     _legacy_validators,
     _types,
     _utils,
     _validators,
     exceptions,
 )
-from jsonschema.compat import (
+from jsonschema_core.compat import (
     Sequence,
     int_types,
     iteritems,
@@ -33,7 +33,7 @@ from jsonschema.compat import (
 # Sigh. https://gitlab.com/pycqa/flake8/issues/280
 #       https://github.com/pyga/ebb-lint/issues/7
 # Imported for backwards compatibility.
-from jsonschema.exceptions import ErrorTree
+from jsonschema_core.exceptions import ErrorTree
 ErrorTree
 
 

@@ -3,8 +3,8 @@ import numbers
 from pyrsistent import pmap
 import attr
 
-from jsonschema.compat import int_types, str_types
-from jsonschema.exceptions import UndefinedTypeCheck
+from jsonschema_core.compat import int_types, str_types
+from jsonschema_core.exceptions import UndefinedTypeCheck
 
 
 def is_array(checker, instance):
