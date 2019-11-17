@@ -6,6 +6,7 @@ import struct
 from jsonschema_core.compat import str_types
 from jsonschema_core.exceptions import FormatError
 
+
 class FormatChecker(object):
     """
     A ``format`` property checker.
