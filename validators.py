@@ -313,11 +313,22 @@ def create(
             if scope:
                 self.resolver.push_scope(scope)
             try:
-                ref = _schema.get(u"$ref")
-                if ref is not None:
-                    validators = [(u"$ref", ref)]
-                else:
-                    validators = iteritems(_schema)
+                """
+                    MODIFICATION: 
+                            Validating all validators in _schema,
+                        even if there's in a '$ref' key.
+                """
+            #--> Old
+                #ref = _schema.get(u"$ref")
+                #if ref is not None:
+                #    validators = [(u"$ref", ref)]
+                #else:
+                #    validators = iteritems(_schema)
+            #<--
+
+            #--> New
+                validators = iteritems(_schema)
+            #<--
 
                 for k, v in validators:
                     validator = self.VALIDATORS.get(k)
